@@ -1,0 +1,22 @@
+/* Download button styles - now in orange for contrast */
+.ux-button.download {
+  background-color: #d97706;
+  color: #ffffff;
+  min-width: 120px;
+  border: 1px solid #a35b00;
+}
+
+.ux-button.download:hover,
+.ux-button.download:focus {
+  background-color: #b45309;
+}
+
+/* Disabled state */
+.ux-button.download.buttonDisabled,
+.ux-button.install.buttonDisabled {
+  background-color: #666666;
+  color: #eeeeee;
+  border: 1px solid #e6e6e6;
+  cursor: default;
+  opacity: 1;
+}
