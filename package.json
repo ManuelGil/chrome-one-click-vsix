@@ -2,7 +2,7 @@
   "name": "chrome-one-click-vsix",
   "displayName": "One-Click VSIX",
   "description": "Integrates with VSCode Marketplace pages to add a one-click button for instant VSIX downloads, streamlining the installation and update process by eliminating extra steps.",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": false,
   "type": "module",
   "author": {
@@ -50,6 +50,7 @@
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@eslint/js": "^9.22.0",
+    "@release-it/conventional-changelog": "^10.0.0",
     "@types/chrome": "^0.0.310",
     "eslint": "^9.22.0",
     "globals": "^16.0.0",
