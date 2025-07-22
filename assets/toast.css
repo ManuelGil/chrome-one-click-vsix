@@ -1,0 +1,21 @@
+.toast-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #ff4444;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toast-notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}

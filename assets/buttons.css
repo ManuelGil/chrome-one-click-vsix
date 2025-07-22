@@ -9,6 +9,7 @@
 .ux-button.download:hover,
 .ux-button.download:focus {
   background-color: #b45309;
+  color: #ffffff;
 }
 
 /* Disabled state */

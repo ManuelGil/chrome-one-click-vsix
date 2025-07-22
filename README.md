@@ -1,6 +1,6 @@
 # One-Click VSIX
 
-![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-One--Click%20VSIX-blue?style=for-the-badge&logo=googlechrome)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-One--Click%20VSIX-blue?style=for-the-badge&logo=googlechrome)](https://chromewebstore.google.com/detail/imojppdbcecfpeafjagncfplelddhigc?utm_source=item-share-cb)
 [![GitHub Repo stars](https://img.shields.io/github/stars/ManuelGil/chrome-one-click-vsix?style=for-the-badge&logo=github)](https://github.com/ManuelGil/chrome-one-click-vsix)
 [![GitHub license](https://img.shields.io/github/license/ManuelGil/chrome-one-click-vsix?style=for-the-badge&logo=github)](https://github.com/ManuelGil/chrome-one-click-vsix/blob/main/LICENSE)
 
