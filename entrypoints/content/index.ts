@@ -2,9 +2,12 @@ import '@/assets/buttons.css';
 import { fetchFileAsBlob } from './services/file-download.service';
 import { triggerBrowserDownload } from './utils/file.utils';
 import { getVsixFileUrl } from './services/marketplace-api.service';
-import { onElementReady } from './utils/dom.utils';
+import { isElementPresent, onElementReady } from './utils/dom.utils';
 import { showError } from './utils/error-handler.utils';
-import { parseExtensionIdentifierFromUrl } from './utils/url.utils';
+import {
+  isExtensionDetailPage,
+  parseExtensionIdentifierFromUrl,
+} from './utils/url.utils';
 
 /**
  * Defines and initializes the content script for the VSIX downloader extension.
@@ -17,8 +20,27 @@ export default defineContentScript({
    */
   async main() {
     try {
-      // Wait for the target element to appear in the DOM
-      const actionContainer = await onElementReady('.ux-item-action');
+      // Run only on extension detail pages to avoid errors on list/search pages
+      if (!isExtensionDetailPage()) {
+        return;
+      }
+
+      // Avoid duplicate injection if already present
+      if (isElementPresent('#wxt-vsix-download-button')) {
+        return;
+      }
+
+      // Wait for the target element to appear in the DOM - silent mode to avoid errors
+      const actionContainer = await onElementReady(
+        '.ux-item-action',
+        10000,
+        true,
+      );
+
+      // If the container was not found, exit silently
+      if (!actionContainer) {
+        return;
+      }
 
       // Create and style the download button
       const downloadButton = document.createElement('button');
@@ -27,6 +49,7 @@ export default defineContentScript({
       downloadButton.className =
         'ms-Button ux-button download ms-Button--default root-39';
       downloadButton.style.marginTop = '10px';
+      downloadButton.id = 'wxt-vsix-download-button';
 
       // Insert the button and add the event listener
       actionContainer.insertAdjacentElement('afterend', downloadButton);

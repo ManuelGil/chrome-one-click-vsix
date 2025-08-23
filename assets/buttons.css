@@ -2,6 +2,7 @@
 .ux-button.download {
   background-color: #d97706;
   color: #ffffff;
+  font-weight: bold;
   min-width: 120px;
   border: 1px solid #a35b00;
 }

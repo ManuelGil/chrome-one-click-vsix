@@ -2,7 +2,6 @@
 
 ## 1.1.0 (2025-07-22)
 
-* fix: revert version number to 1.0.0 in package.json ([d71faa3](https://github.com/ManuelGil/chrome-one-click-vsix/commit/d71faa3))
 * feat: implement VSIX downloader with toast notifications and improved error handling ([8296bdd](https://github.com/ManuelGil/chrome-one-click-vsix/commit/8296bdd))
 
 ## 1.0.0 (2025-03-22)

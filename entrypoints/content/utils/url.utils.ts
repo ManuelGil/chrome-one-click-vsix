@@ -39,3 +39,13 @@ export function parseExtensionIdentifierFromUrl(): ExtensionIdentifier {
 
   return { publisher, extensionName };
 }
+
+/**
+ * Returns true if the current URL corresponds to an extension detail page.
+ * It checks for the presence of the 'itemName' query parameter.
+ */
+export function isExtensionDetailPage(): boolean {
+  const params = new URLSearchParams(window.location.search);
+  const itemName = params.get('itemName');
+  return !!itemName;
+}
