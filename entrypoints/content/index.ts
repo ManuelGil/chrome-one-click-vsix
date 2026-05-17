@@ -14,7 +14,7 @@ import {
  * Separates UI, validation, and business logic for maintainability.
  */
 export default defineContentScript({
-  matches: ['*://marketplace.visualstudio.com/*'],
+  matches: ['https://marketplace.visualstudio.com/*'],
   /**
    * Main entry point for the content script. Adds a download button and handles its logic.
    */
