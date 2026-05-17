@@ -8,17 +8,5 @@
   },
   "npm": {
     "publish": false
-  },
-  "plugins": {
-    "@release-it/conventional-changelog": {
-      "infile": "CHANGELOG.md",
-      "preset": {
-        "name": "conventionalcommits",
-        "type": [
-          { "type": "feat", "section": "Features" },
-          { "type": "fix", "section": "Bug Fixes" }
-        ]
-      }
-    }
   }
 }
