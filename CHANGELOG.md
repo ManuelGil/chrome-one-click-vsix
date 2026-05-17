@@ -1,5 +1,11 @@
 # Changelog
 
+All notable changes to this project will be documented in this file.
+
+## 1.2.1 (2026-05-17)
+
+- feat: update TypeScript configuration and WXT config ([6750723](https://github.com/ManuelGil/chrome-one-click-vsix/commit/6750723))
+
 ## 1.2.0 (2025-08-23)
 
 - feat: enhance VSIX downloader with improved element handling and new utility functions ([be1b0e2](https://github.com/ManuelGil/chrome-one-click-vsix/commit/be1b0e2))
